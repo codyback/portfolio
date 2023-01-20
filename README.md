@@ -1,38 +1,32 @@
-# create-svelte
+# Portfolio
+This portfolio website features an "About" page, a "Projects" page, a "Blog" page, and a "Resources" page. It showcases an individual's skills, past and current projects, thoughts, and useful resources. Built using SvelteKit, TailwindCSS, Vite, Vitest, and Playwright, it provides a smooth user experience. The code is well-structured, maintainable, and well-tested.
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+- **SvelteKit**: A framework for building web applications that provides a unified development experience, from development to deployment. It is built on top of Svelte, a popular JavaScript framework for building user interfaces. SvelteKit allows for easy setup and configuration of a Svelte project, with features such as routing, server-side rendering, and more. We have used SvelteKit to build the frontend of our website, including the components, pages and routing.
 
-## Creating a project
+- **TailwindCSS**: A utility-first CSS framework that provides a set of low-level utility classes that can be composed to build complex designs. It uses a "utility-first" approach, where classes are used to apply styles, rather than having a pre-defined set of CSS selectors. This allows for a more modular and maintainable codebase. We have used Tailwind CSS to style our website, providing a consistent and responsive design.
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Vite**: A development server that provides fast and efficient development experience. It uses native ES modules in the browser, which allows for faster development builds and hot module replacement. We have used Vite to serve our website during development, providing a fast and smooth development experience.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+- **Vitest**: A testing framework for Svelte applications. It is built on top of Jest, a popular JavaScript testing framework, and provides a set of utilities for testing Svelte components. We have used Vitest to write and run tests for our website, ensuring that our code is working as expected.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+- **Playwright**: A Node.js library to automate web browsers. It allows for end-to-end testing of web applications, by automating a browser and interacting with the website as a user would. We have used Playwright to run end-to-end tests on our website, ensuring that our website is working correctly on different browsers and devices.
 
-## Developing
+## Development
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+To get started with development, please follow these steps:
 
-```bash
-npm run dev
+1. Clone the repository to your local machine using `git clone`.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+2. Run `pnpm install` to install all the dependencies. This will install all the packages specified in the package.json file.
 
-## Building
+3. Run `npm run dev` to start the development server. The website will be available at http://localhost:5173. The development server uses Vite and will automatically reload the website whenever a change is made to the code.
 
-To create a production version of your app:
+## Testing
 
-```bash
-npm run build
-```
+To run unit tests, use the command `npm run test:unit`. This will run all the tests specified in the tests/unit folder using Vitest.
 
-You can preview the production build with `npm run preview`.
+To run e2e tests, use the command `npm run test:e2e`. This will run all the tests specified in the tests/e2e folder using playwright.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Build
+
+To build the production version of the website, use the command `npm run build.` 
