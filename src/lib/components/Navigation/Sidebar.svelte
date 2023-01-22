@@ -5,7 +5,7 @@
 </script>
 
 {#if open}
-<aside transition:fly={{x: 640, opacity: 1}} class="absolute w-full h-full bg-gray-200 border-l-2 shadow-lg" class:open>
+<aside transition:fly={{x: 640, opacity: 1}} class="absolute w-full h-full z-10 bg-gray-200 border-l-2 shadow-lg" class:open>
 	<nav class="p-12 text-xl">
 		<a href="/about" class="px-2 py-3 block rounded-md hover:bg-slate-200 leading-10" on:click={() => open = !open}>ABOUT</a>
     <a href="/projects" class="px-2 py-3 block rounded-md hover:bg-slate-200 leading-10" on:click={() => open = !open}>PROJECTS</a>
