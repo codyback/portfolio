@@ -225,7 +225,61 @@ async function main() {
       }
     },
   });
-  console.log({ homepage });
+
+  const about = await prisma.about.upsert({
+    where: { id: 'cld8drnhp000008jpe62h5cxk' },
+    update: {},
+    create: {
+      imageUrl: '',
+      goals: {
+        create: [
+          {
+            id: 'cld8dt9ad000108jp12373d3t',
+            name: 'Fitness',
+            goalPost: '182 Days',
+            year: '2023',
+          },
+          {
+            id: 'cld8dtcv7000208jpfs9z3mg6',
+            name: 'Reading',
+            goalPost: '26 Books',
+            year: '2023',
+          },
+          {
+            id: 'cld8dtfq3000308jp56aecjtw',
+            name: 'AWS Certifications',
+            goalPost: '6 Certs',
+            year: '2023',
+          },
+        ]
+      },
+      paragraphs: {
+        create: [
+          {
+            id: 'cld8dxl5r000408jp5s9zdt3t',
+            description: `I'm a junior software developer with a passion for problem-solving and technology. I find the challenge of solving problems and the never-ending learning opportunities that come with working in technology to be incredibly satisfying. I have experience in few programming languages like JavaScript, Java, and C#, and I am constantly trying to expand my skill set by learning new technologies and programming languages.`,
+          },
+          {
+            id: 'cld8dxof0000508jpaufj121g',
+            description: `In my free time, I enjoy reading, especially fantasy and science fiction. I find the imagination and world-building in these genres to be truly captivating. Recently, I've taken up cooking and have been having a blast experimenting with new recipes. I have found that cooking is a great way to unwind and create something delicious at the same time. I'm also making an effort to read more non-fiction and books about computer science to keep expanding my knowledge and learn more about the industry I'm in.`,
+          },
+          {
+            id: 'cld8dxrfm000608jp1g0j4w9q',
+            description: `When it comes to video games, I'm a big fan of retro games like A Link to the Past and Super Mario World. I find the nostalgia and simplicity of these games to be incredibly enjoyable, and I think it's great to be able to play games that have stood the test of time. I also like to play some modern games, but I always come back to my favorites from the past.`,
+          },
+          {
+            id: 'cld8dxuks000708jp21j3evga',
+            description: `Covid-19 put a bit of a damper on my fitness routine, but I'm determined to get back into it this year. I've set a goal to be active for at least 182 days this year, and I'm focusing on getting back into a consistent routine by incorporating different exercises like running, weightlifting, and yoga.`,
+          },
+          {
+            id: 'cld8dxyb1000808jp2vcte1cx',
+            description: `I'm also planning to get AWS certifications to expand my knowledge and skills in the field, as well as finishing my portfolio website. I believe that having a portfolio website will help me showcase my work and improve my chances of landing my dream job. I'm excited for what the year has in store and look forward to continuing to grow as a developer.`,
+          },
+        ]
+      }
+    }
+  })
+  console.log({ homepage, about });
 }
 main()
   .then(async () => {

@@ -89,3 +89,27 @@ model Certificate {
   technologyCertificate   TechnologyCertificate @relation(fields: [technologyCertificateId], references: [id])
   technologyCertificateId String
 }
+
+model About {
+  id String @id @default(cuid())
+  imageUrl String
+  goals Goal[]
+  paragraphs AboutParagraph[]
+}
+
+model Goal {
+  id String @id @default(cuid())
+  name String
+  goalPost String
+  year String
+  completedAt DateTime?
+  about About @relation(fields: [aboutId], references: [id])
+  aboutId String
+}
+
+model AboutParagraph {
+  id String @id @default(cuid())
+  description String
+  about About @relation(fields: [aboutId], references: [id])
+  aboutId String
+}
