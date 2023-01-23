@@ -1,5 +1,6 @@
 <script>
   import Hamburger from '@/lib/components/Navigation/Hamburger.svelte';
+  import { page } from '$app/stores';
 
   export let sidebar = false;
 </script>
@@ -13,10 +14,34 @@
   
   <div class="py-2 text-right w-fit">
     <nav class="py-2 tracking-wider hidden sm:inline text-neutral-800">
-      <a href="/about" class="px-2 py-3 rounded-md hover:bg-neutral-200 leading-10">About</a>
-      <a href="/projects" class="px-2 py-3 rounded-md hover:bg-neutral-200 leading-10">Projects</a>
-      <a href="/blog" class="px-2 py-3 rounded-md hover:bg-neutral-200 leading-10">Blog</a>
-      <a href="/resources" class="px-2 py-3 rounded-md hover:bg-neutral-200 leading-10">Resources</a>
+      <a 
+        href="/about" 
+        class="px-2 py-3 rounded-md hover:bg-neutral-200 leading-10"
+        class:underline={$page.url.pathname==='/about'}  
+      >
+        About
+      </a>
+      <a 
+        href="/projects" 
+        class="px-2 py-3 rounded-md hover:bg-neutral-200 leading-10"
+        class:underline={$page.url.pathname==='/projects'}  
+      >
+        Projects
+      </a>
+      <a 
+        href="/blog" 
+        class="px-2 py-3 rounded-md hover:bg-neutral-200 leading-10"
+        class:underline={$page.url.pathname==='/blog'}    
+      >
+        Blog
+      </a>
+      <a 
+        href="/resources" 
+        class="px-2 py-3 rounded-md hover:bg-neutral-200 leading-10"
+        class:underline={$page.url.pathname==='/resources'}    
+      >
+        Resources
+      </a>
     </nav>
     <img class="h-10 w-10 rounded-full bg-slate-500 hidden sm:inline-block" src="" alt="" />
     <Hamburger bind:open={sidebar} />

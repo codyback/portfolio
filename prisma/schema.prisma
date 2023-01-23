@@ -11,63 +11,81 @@ datasource db {
 }
 
 model Homepage {
-  id String @id @default(cuid())
-  profession  String 
-  tagline String
-  description String
-  favoriteTech String
-  favoriteTechURL String
-  currentlyLearning String
+  id                   String                  @id @default(cuid())
+  profession           String
+  tagline              String
+  description          String
+  favoriteTech         String
+  favoriteTechURL      String
+  currentlyLearning    String
   currentlyLearningURL String
-  currentlyReading String
-  currentlyReadingURL String
-  experiences Experience[]
-  skills Skill[]
-  hobbies Hobby[]
-  certifications TechnologyCertificate[]
+  currentlyReading     String
+  currentlyReadingURL  String
+  experiences          Experience[]
+  skills               Skill[]
+  hobbies              Hobby[]
+  certifications       TechnologyCertificate[]
 }
 
 model Experience {
-  id String @id @default(cuid())
-  company String
-  url String?
-  description String
-  position String
-  startDate DateTime
-  endDate DateTime?
-  isEmployed Boolean @default(false)
-  homepage Homepage @relation(fields: [homepageId], references: [id])
-  homepageId String
+  id               String                     @id @default(cuid())
+  company          String
+  url              String?
+  description      String?
+  position         String
+  startDate        DateTime
+  endDate          DateTime?
+  isEmployed       Boolean                    @default(false)
+  homepage         Homepage                   @relation(fields: [homepageId], references: [id])
+  homepageId       String
+  responsibilities ExperienceResponsibility[]
+  projects         ExperienceProject[]
+}
+
+model ExperienceResponsibility {
+  id           String     @id @default(cuid())
+  description  String
+  experience   Experience @relation(fields: [experienceId], references: [id])
+  experienceId String
+}
+
+model ExperienceProject {
+  id           String     @id @default(cuid())
+  name         String
+  url          String?
+  description  String
+  experience   Experience @relation(fields: [experienceId], references: [id])
+  experienceId String
 }
 
 model Skill {
-  id String @id @default(cuid())
-  name String
-  url String
-  homepage Homepage @relation(fields: [homepageId], references: [id])
+  id         String   @id @default(cuid())
+  name       String
+  url        String
+  homepage   Homepage @relation(fields: [homepageId], references: [id])
   homepageId String
 }
 
 model Hobby {
-  id String @id @default(cuid())
-  name String
-  url String
-  homepage Homepage @relation(fields: [homepageId], references: [id])
+  id         String   @id @default(cuid())
+  name       String
+  url        String
+  homepage   Homepage @relation(fields: [homepageId], references: [id])
   homepageId String
 }
 
 model TechnologyCertificate {
-  id String @id @default(cuid())
-  name String
+  id           String        @id @default(cuid())
+  name         String
   certificates Certificate[]
-  homepage Homepage @relation(fields: [homepageId], references: [id])
-  homepageId String
+  homepage     Homepage      @relation(fields: [homepageId], references: [id])
+  homepageId   String
 }
 
 model Certificate {
-  id String @id @default(cuid())
-  name String
-  completedAt DateTime
-  technologyCertificate TechnologyCertificate @relation(fields: [technologyCertificateId], references: [id])
+  id                      String                @id @default(cuid())
+  name                    String
+  completedAt             DateTime
+  technologyCertificate   TechnologyCertificate @relation(fields: [technologyCertificateId], references: [id])
   technologyCertificateId String
 }

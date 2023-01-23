@@ -20,21 +20,71 @@ async function main() {
           {
             id: 'cld7vx4xs000108l5ct498n8z',
             company: 'UPMC Enterprises',
-            url: '',
-            description: '',
+            url: 'https://enterprises.upmc.com/',
             position: 'Associate Software Engineer',
             startDate: new Date('05-02-2022'),
             isEmployed: true,
+            responsibilities: {
+              create: [
+                {
+                  id: 'cld88xmtz000508l0bl28gfn0',
+                  description: 'Writing, testing and maintaining code for various software applications and systems'
+                },
+                {
+                  id: 'cld88xtar000608l0al68c8u2',
+                  description: 'Collaborating with other team members to develop and implement new features and functionality'
+                },
+                {
+                  id: 'cld88xwjo000708l079408zim',
+                  description: 'Participating in code reviews and ensuring that all code adheres to industry standards and best practices'
+                },
+                {
+                  id: 'cld88y007000808l0gj8l7m7q',
+                  description: 'Continuously learning new technologies and programming languages to stay current with industry developments'
+                }
+              ]
+            },
+            projects: {
+              create: [
+                {
+                  id: 'cld8909uc000908l09uah1fj8',
+                  name: 'Safar TeleCare',
+                  url: 'https://safar-telecare.upmce.net/',
+                  description: 'TeleConsults for the future of medicine'
+                }
+              ]
+            }
           },
           {
             id: 'cld7w36re000208l5ebbu2dm3',
             company: 'Tech Elevator',
-            url: '',
+            url: 'https://www.techelevator.com/',
             description: 'Attended a 14-week full-stack coding bootcamp learning how to create dynamic web-based software systems using Java providing 700+ hours of development education and application.',
             position: 'Coding Bootcamp',
             startDate: new Date('01-14-2022'),
             endDate: new Date('04-18-2022'),
             isEmployed: false,
+            projects: {
+              create: [
+                {
+                  id: 'cld893qr6000a08l01pp60t6e',
+                  name: 'Vending Machine Application',
+                  url: 'https://github.com/codyback/vending-machine',
+                  description: 'Created an application which presented a user with a set of menus to add money, view/buy items, and receive change. This project demonstrates the usage of Object-Oriented Programming as well as Unit-Testing using Java.'
+                },
+                {
+                  id: 'cld893u4n000b08l0cq1j3rrb',
+                  name: 'Tenmo Application',
+                  url: 'https://github.com/codyback/tenmo',
+                  description: 'Developed a full-stack application using Java, Spring Boot, and PostgreSQL, which allowed users to register, login, send/receive/request money. Complete with authentication, server-side and client-side validation.'
+                },
+                {
+                  id: 'cld893yln000c08l0dlq76rrb',
+                  name: 'Golf Tracker Application',
+                  description: 'Created with IntelliJ in Java utilizing a RESTful SpringBoot backend framework, PostgreSQL database, and a fully responsive front end using VueJS components. Additionally takes advantage of the Google Maps API for displaying location data of courses from our database. This web application can track golf rounds for various courses as well as golf rounds in a league with you and your friends.'
+                },
+              ]
+            }
           }
         ]
       },

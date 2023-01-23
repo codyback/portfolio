@@ -8,10 +8,19 @@ export async function load() {
   return {
     homepage: prisma.homepage.findFirst({
       include: {
-        experiences: true,
+        experiences: {
+          include: {
+            responsibilities: true,
+            projects: true,
+          }
+        },
         skills: true,
         hobbies: true,
-        certifications: true,
+        certifications: {
+          include: {
+            certificates: true
+          }
+        },
       }
     })
   }

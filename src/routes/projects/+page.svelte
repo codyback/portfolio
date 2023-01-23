@@ -1,6 +1,6 @@
 <div class="sm:grid sm:grid-cols-3 sm:gap-5 mt-8 sm:mt-10">
   <div class="sm:cols-span-1 mt-2 sm:mt-0">
-    <div class="relative overflow-hidden rounded-lg shadow-lg hover:scale-110 transition duration-300 ease-in-out cursor-pointer">
+    <div class="relative overflow-hidden rounded-lg shadow-lg sm:hover:scale-110 transition duration-300 ease-in-out cursor-pointer">
       <img class="object-cover w-full h-48 bg-gray-500" src="" alt=""/>
     
       <div class="absolute top-0 left-0 px-6 py-4">
@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="sm:cols-span-1 mt-2 sm:mt-0">
-    <div class="relative overflow-hidden rounded-lg shadow-lg hover:scale-110 transition duration-300 ease-in-out cursor-pointer">
+    <div class="relative overflow-hidden rounded-lg shadow-lg sm:hover:scale-110 transition duration-300 ease-in-out cursor-pointer">
       <img class="object-cover w-full h-48 bg-gray-500" src="" alt=""/>
     
       <div class="absolute top-0 left-0 px-6 py-4">
@@ -20,7 +20,7 @@
     </div>
   </div>
   <div class="sm:cols-span-1 mt-2 sm:mt-0">
-    <div class="relative overflow-hidden rounded-lg shadow-lg hover:scale-110 transition duration-300 ease-in-out cursor-pointer">
+    <div class="relative overflow-hidden rounded-lg shadow-lg sm:hover:scale-110 transition duration-300 ease-in-out cursor-pointer">
       <img class="object-cover w-full h-48 bg-gray-500" src="" alt=""/>
     
       <div class="absolute top-0 left-0 px-6 py-4">
@@ -29,8 +29,8 @@
       </div>
     </div>
   </div>
-  <div class="sm:cols-span-1 mt-5 sm:mt-0">
-    <div class="relative overflow-hidden rounded-lg shadow-lg hover:scale-110 transition duration-300 ease-in-out cursor-pointer">
+  <div class="sm:cols-span-1 mt-2 sm:mt-0">
+    <div class="relative overflow-hidden rounded-lg shadow-lg sm:hover:scale-110 transition duration-300 ease-in-out cursor-pointer">
       <img class="object-cover w-full h-48 bg-gray-500" src="" alt=""/>
     
       <div class="absolute top-0 left-0 px-6 py-4">
