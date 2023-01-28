@@ -1,0 +1,70 @@
+// Vitest Snapshot v1
+
+exports[`CertificatesSection > renders correctly with open false 1`] = `
+<body>
+  <div>
+    <section
+      id="cvCertificates"
+    >
+      <div
+        class="border-b-2 border-black pb-3"
+      >
+        <h3
+          class="uppercase text-2xl font-bold text-right"
+        >
+          Certificates
+        </h3>
+      </div>
+       
+      <div
+        class="border-t-4 border-black mt-0.5 pt-8 font-bold"
+      >
+        <div
+          class="flex items-center"
+        >
+          <span
+            class="text-lg"
+          >
+            testing-title
+          </span>
+           
+          <span
+            class="px-4 py-0.5 ml-2 bg-black text-white rounded-full text-xs"
+          >
+            1
+          </span>
+        </div>
+         
+        <hr
+          class="border border-black my-4"
+        />
+         
+        <div
+          class="grid grid-cols-2 items-center"
+        >
+          <p
+            class="sm:col-span-1 text-lg leading-none"
+          >
+            testing
+          </p>
+           
+          <div
+            class="col-span-1 text-right"
+          >
+            <span
+              class="px-4 py-0.5 border border-black rounded-full text-xs uppercase"
+            >
+              Jan 2023
+            </span>
+          </div>
+        </div>
+         
+        
+         
+        
+      </div>
+    </section>
+    <!--&lt;CertificatesSection&gt;-->
+  </div>
+</body>
+`;

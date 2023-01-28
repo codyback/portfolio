@@ -1,9 +1,10 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import path from 'path';
 
-import type { UserConfig } from 'vite';
+import { defineConfig } from 'vitest/config'
 
-const config: UserConfig = {
+
+export default defineConfig({
 	plugins: [sveltekit()],
 	resolve:{
     alias:{
@@ -11,8 +12,18 @@ const config: UserConfig = {
     },
   },
 	test: {
-		include: ['tests/unit/**/*.{test,spec}.{js,ts}']
+		include: ['tests/unit/**/*.{test,spec}.{js,ts}'],
+		environment: 'jsdom',
+		globals: true,
+		setupFiles: 'tests/unit/setupTests.ts',
+		coverage: {
+      exclude: ['tests/']
+    },
+		deps: {
+			inline: true
+		},
+		// alias: {
+		// 	$app: path.resolve(__dirname, 'tests/unit/__mocks__/app/')
+		// },
 	}
-};
-
-export default config;
+});

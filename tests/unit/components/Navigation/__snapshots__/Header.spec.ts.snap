@@ -1,0 +1,201 @@
+// Vitest Snapshot v1
+
+exports[`Header > renders correctly with open false 1`] = `
+<body>
+  <div>
+    <header
+      class="flex justify-between border-b z-20 relative"
+    >
+      <div
+        class="py-2"
+      >
+        <a
+          class="font-bold text-xl leading-10 tracking-tight"
+          href="/"
+        >
+          Cody Backus
+        </a>
+      </div>
+       
+      <div
+        class="py-2 text-right w-fit"
+      >
+        <nav
+          class="py-2 tracking-wider hidden sm:inline text-neutral-800"
+        >
+          <a
+            class="px-2 py-3 rounded-md hover:bg-neutral-200 leading-10 underline"
+            href="/about"
+          >
+            About
+          </a>
+           
+          <a
+            class="px-2 py-3 rounded-md hover:bg-neutral-200 leading-10"
+            href="/projects"
+          >
+            Projects
+          </a>
+           
+          <a
+            class="px-2 py-3 rounded-md hover:bg-neutral-200 leading-10"
+            href="/blog"
+          >
+            Blog
+          </a>
+           
+          <a
+            class="px-2 py-3 rounded-md hover:bg-neutral-200 leading-10"
+            href="/resources"
+          >
+            Resources
+          </a>
+        </nav>
+         
+        <img
+          alt=""
+          class="h-10 w-10 rounded-full bg-slate-500 hidden sm:inline-block"
+          src=""
+        />
+         
+        <button
+          class="sm:hidden flex items-center justify-items-end m-auto h-10 w-fit hover:text-gray-700 cursor-pointer border-none focus:outline-none s-zPZ177rNd-sa"
+        >
+          <svg
+            class="s-zPZ177rNd-sa"
+            height="24"
+            width="28"
+          >
+            <line
+              class="s-zPZ177rNd-sa"
+              id="top"
+              x1="0"
+              x2="28"
+              y1="3"
+              y2="3"
+            />
+            <line
+              class="s-zPZ177rNd-sa"
+              id="middle"
+              x1="0"
+              x2="28"
+              y1="11"
+              y2="11"
+            />
+            <line
+              class="s-zPZ177rNd-sa"
+              id="bottom"
+              x1="0"
+              x2="28"
+              y1="19"
+              y2="19"
+            />
+          </svg>
+        </button>
+        <!--&lt;Hamburger&gt;-->
+      </div>
+    </header>
+    <!--&lt;Header&gt;-->
+  </div>
+</body>
+`;
+
+exports[`Header > renders correctly with open true 1`] = `
+<body>
+  <div>
+    <header
+      class="flex justify-between border-b z-20 relative"
+    >
+      <div
+        class="py-2"
+      >
+        <a
+          class="font-bold text-xl leading-10 tracking-tight"
+          href="/"
+        >
+          Cody Backus
+        </a>
+      </div>
+       
+      <div
+        class="py-2 text-right w-fit"
+      >
+        <nav
+          class="py-2 tracking-wider hidden sm:inline text-neutral-800"
+        >
+          <a
+            class="px-2 py-3 rounded-md hover:bg-neutral-200 leading-10 underline"
+            href="/about"
+          >
+            About
+          </a>
+           
+          <a
+            class="px-2 py-3 rounded-md hover:bg-neutral-200 leading-10"
+            href="/projects"
+          >
+            Projects
+          </a>
+           
+          <a
+            class="px-2 py-3 rounded-md hover:bg-neutral-200 leading-10"
+            href="/blog"
+          >
+            Blog
+          </a>
+           
+          <a
+            class="px-2 py-3 rounded-md hover:bg-neutral-200 leading-10"
+            href="/resources"
+          >
+            Resources
+          </a>
+        </nav>
+         
+        <img
+          alt=""
+          class="h-10 w-10 rounded-full bg-slate-500 hidden sm:inline-block"
+          src=""
+        />
+         
+        <button
+          class="sm:hidden flex items-center justify-items-end m-auto h-10 w-fit hover:text-gray-700 cursor-pointer border-none focus:outline-none s-zPZ177rNd-sa open"
+        >
+          <svg
+            class="s-zPZ177rNd-sa"
+            height="24"
+            width="28"
+          >
+            <line
+              class="s-zPZ177rNd-sa"
+              id="top"
+              x1="0"
+              x2="28"
+              y1="3"
+              y2="3"
+            />
+            <line
+              class="s-zPZ177rNd-sa"
+              id="middle"
+              x1="0"
+              x2="28"
+              y1="11"
+              y2="11"
+            />
+            <line
+              class="s-zPZ177rNd-sa"
+              id="bottom"
+              x1="0"
+              x2="28"
+              y1="19"
+              y2="19"
+            />
+          </svg>
+        </button>
+        <!--&lt;Hamburger&gt;-->
+      </div>
+    </header>
+    <!--&lt;Header&gt;-->
+  </div>
+</body>
+`;

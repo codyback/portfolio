@@ -1,0 +1,54 @@
+// Vitest Snapshot v1
+
+exports[`Sidebar > renders correctly with open false 1`] = `
+<body>
+  <div>
+    
+    <!--&lt;Sidebar&gt;-->
+  </div>
+</body>
+`;
+
+exports[`Sidebar > renders correctly with open true 1`] = `
+<body>
+  <div>
+    <aside
+      class="absolute w-full h-full z-10 bg-gray-200 border-l-2 shadow-lg s-RQ-jkbaw6IIv open"
+    >
+      <nav
+        class="p-12 text-xl s-RQ-jkbaw6IIv"
+      >
+        <a
+          class="px-2 py-3 block rounded-md hover:bg-slate-200 leading-10 s-RQ-jkbaw6IIv"
+          href="/about"
+        >
+          ABOUT
+        </a>
+         
+        <a
+          class="px-2 py-3 block rounded-md hover:bg-slate-200 leading-10 s-RQ-jkbaw6IIv"
+          href="/projects"
+        >
+          PROJECTS
+        </a>
+         
+        <a
+          class="px-2 py-3 block rounded-md hover:bg-slate-200 leading-10 s-RQ-jkbaw6IIv"
+          href="/blog"
+        >
+          BLOG
+        </a>
+         
+        <a
+          class="px-2 py-3 block rounded-md hover:bg-slate-200 leading-10 s-RQ-jkbaw6IIv"
+          href="/resources"
+        >
+          RESOURCES
+        </a>
+      </nav>
+    </aside>
+    
+    <!--&lt;Sidebar&gt;-->
+  </div>
+</body>
+`;
