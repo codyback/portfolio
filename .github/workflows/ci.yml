@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+      - run: npm install -g pnpm
+      - name: 'Install'
+        run: pnpm install
+      - name: 'Lint'
+        run: pnpm lint
+      - name: 'Test'
+        if: always() # always run tests, even if linting fails
+        run: pnpm test:unit:coverage
+      - name: 'Report Coverage'
+        if: always() # Also generate the report if tests are failing
+        uses: davelosert/vitest-coverage-report-action@v1
