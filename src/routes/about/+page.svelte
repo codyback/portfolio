@@ -1,5 +1,4 @@
 <script lang="ts">
-	import InteractiveUs from '@/lib/components/InteractiveUS.svelte';
 	import Saos from 'saos';
 
 	import type { PageData } from './$types';
@@ -48,8 +47,5 @@
 				</section>
 			</Saos>
 		</div>
-		<!-- <div class="mt-6 col-span-2">
-			<InteractiveUs />
-		</div> -->
 	</div>
 {/if}

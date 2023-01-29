@@ -1,4 +1,5 @@
 # Portfolio
+
 This portfolio website features an "About" page, a "Projects" page, a "Blog" page, and a "Resources" page. It showcases an individual's skills, past and current projects, thoughts, and useful resources. Built using SvelteKit, TailwindCSS, Vite, Vitest, and Playwright, it provides a smooth user experience. The code is well-structured, maintainable, and well-tested.
 
 - **SvelteKit**: A framework for building web applications that provides a unified development experience, from development to deployment. It is built on top of Svelte, a popular JavaScript framework for building user interfaces. SvelteKit allows for easy setup and configuration of a Svelte project, with features such as routing, server-side rendering, and more. We have used SvelteKit to build the frontend of our website, including the components, pages and routing.
@@ -19,14 +20,20 @@ To get started with development, please follow these steps:
 
 2. Run `pnpm install` to install all the dependencies. This will install all the packages specified in the package.json file.
 
-3. Run `npm run dev` to start the development server. The website will be available at http://localhost:5173. The development server uses Vite and will automatically reload the website whenever a change is made to the code.
+3. Run `docker-compose up -d` to start the postgreSQL database using docker. This will run in the background.
+
+4. Run `npx prisma migrate dev` to migrate the schema over to the local database.
+
+5. Run `npx prisma db seed` to seed in some testing data.
+
+6. Run `pnpm dev` to start the development server. The website will be available at http://localhost:5173. The development server uses Vite and will automatically reload the website whenever a change is made to the code.
 
 ## Testing
 
-To run unit tests, use the command `npm run test:unit`. This will run all the tests specified in the tests/unit folder using Vitest.
+To run unit tests, use the command `pnpm test:unit`. This will run all the tests specified in the tests/unit folder using Vitest.
 
-To run e2e tests, use the command `npm run test:e2e`. This will run all the tests specified in the tests/e2e folder using playwright.
+To run e2e tests, use the command `pnpm test:e2e`. This will run all the tests specified in the tests/e2e folder using playwright.
 
 ## Build
 
-To build the production version of the website, use the command `npm run build.` 
+To build the production version of the website, use the command `pnpm build.`

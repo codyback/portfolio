@@ -12,7 +12,8 @@
 		"test:unit": "vitest",
 		"test:unit:coverage": "vitest --coverage",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"audit": "audit"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",

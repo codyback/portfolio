@@ -15,10 +15,10 @@ const certifications: (TechnologyCertificate & {
 				id: 'cert-id',
 				name: 'testing',
 				completedAt: new Date(),
-				technologyCertificateId: ''
-			}
-		]
-	}
+				technologyCertificateId: '',
+			},
+		],
+	},
 ];
 
 describe('CertificatesSection', () => {
