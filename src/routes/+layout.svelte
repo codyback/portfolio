@@ -4,17 +4,20 @@
 	import Footer from '@/lib/components/Footer.svelte';
 	import '@/app.css';
 
+	let title = 'Cody Backus - Software Engineer';
+
 	let open = false;
 </script>
 
 <svelte:head>
+	<title>{title}</title>
 	<meta
-		name="viewport"
-		content="user-scalable=no, width=device-width, initial-scale=1.0"
+		property="og:title"
+		content={title}
 	/>
 	<meta
-		name="apple-mobile-web-app-capable"
-		content="yes"
+		name="twitter:title"
+		content={title}
 	/>
 </svelte:head>
 
