@@ -1,4 +1,4 @@
-<footer class="bg-white">
+<footer>
 	<div
 		class="mx-auto max-w-7xl py-8 px-6 md:flex md:items-center md:justify-between lg:px-8"
 	>
@@ -30,7 +30,7 @@
 				href="https://github.com/codyback"
 				rel="noreferrer"
 				target="_blank"
-				class="text-gray-400 hover:text-brands-github hover:scale-150 duration-300 transition-all"
+				class="text-gray-400 hover:text-brands-github dark:hover:text-white hover:scale-150 duration-300 transition-all"
 			>
 				<span class="sr-only">GitHub</span>
 				<svg

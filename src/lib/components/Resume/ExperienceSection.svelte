@@ -4,7 +4,8 @@
 		ExperienceResponsibility,
 		ExperienceProject,
 	} from '@prisma/client';
-	import { getExperienceDateRange } from '@/lib/utils/DateUtils';
+	import { getExperienceDateRange } from '$lib/utils/DateUtils';
+	import SectionHeading from '$lib/components/SectionHeading.svelte';
 
 	type ExperienceWithRelations = Experience & {
 		responsibilities: ExperienceResponsibility[];
@@ -14,12 +15,13 @@
 	export let experiences: ExperienceWithRelations[];
 </script>
 
-<section id="cvExperiences">
-	<div class="mt-10 sm:mt-20 border-b-2 border-black pb-3">
-		<h3 class="uppercase text-2xl font-bold text-right">Experience</h3>
-	</div>
+<section
+	id="cvExperiences"
+	class="mt-10 lg:mt-20"
+>
+	<SectionHeading heading="Experience" />
 
-	<div class="border-t-4 border-black mt-0.5 pt-8">
+	<div class="pt-8">
 		{#each experiences as experience, i}
 			<div>
 				<div class="sm:grid sm:grid-cols-2 items-center font-bold">
@@ -34,13 +36,13 @@
 				</div>
 
 				{#if experience.description}
-					<p class="pt-4 text-neutral-500">
+					<p class="pt-4 text-neutral-500 dark:text-neutral-300">
 						{experience.description}
 					</p>
 				{/if}
 
 				{#if experience.responsibilities.length !== 0}
-					<ul class="pt-4 list-disc text-neutral-500">
+					<ul class="pt-4 list-disc text-neutral-500 dark:text-neutral-300">
 						Responsibilities include:
 						{#each experience.responsibilities as responsibility}
 							<li class="ml-4">
@@ -51,14 +53,14 @@
 				{/if}
 
 				{#if experience.projects.length !== 0}
-					<ul class="pt-4 list-disc text-neutral-500">
+					<ul class="pt-4 list-disc text-neutral-500 dark:text-neutral-300">
 						Projects worked on:
 						{#each experience.projects as project}
 							<li class="ml-4">
 								{#if project.url}
 									<a
 										href={project.url}
-										class="hover:text-black underline font-bold"
+										class="hover:text-black dark:hover:text-white underline font-bold"
 										>{project.name}</a
 									>: {project.description}
 								{:else}

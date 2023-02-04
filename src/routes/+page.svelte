@@ -18,10 +18,10 @@
 		animation={'from-left 0.5s cubic-bezier(0.42, 0.0, 0.58, 1.0) both'}
 	>
 		<section class="mt-10">
-			<h1 class="uppercase sm:text-5xl text-4xl">
+			<h1 class="uppercase sm:text-5xl text-4xl dark:text-dark-600">
 				{data.homepage?.profession}
 			</h1>
-			<h2 class="uppercase font-bold sm:text-6xl text-4xl">
+			<h2 class="uppercase font-bold sm:text-6xl text-4xl dark:text-dark-400">
 				{data.homepage?.tagline}
 			</h2>
 		</section>

@@ -7,7 +7,7 @@
 </script>
 
 {#if data.about}
-	<div class="sm:grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-20">
+	<div class="sm:grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-20">
 		<div>
 			<Saos
 				once
@@ -25,7 +25,7 @@
 					<h1 class="text-2xl text-right mt-10">2023 Goals</h1>
 					{#each data.about.goals as goal, i}
 						<div
-							class="border-t-2 border-black grid grid-cols-2 py-3"
+							class="border-t-2 border-black dark:border-neutral-500 dark:text-neutral-300 grid grid-cols-2 py-3"
 							class:border-b-2={i + 1 === data.about.goals.length}
 						>
 							<div class="col-span-1">{goal.name}</div>
@@ -35,7 +35,7 @@
 				</section>
 			</Saos>
 		</div>
-		<div class="mt-6 lg:col-span-2">
+		<div class="lg:col-span-2 mt-6">
 			<Saos
 				once
 				animation={'from-right 0.5s cubic-bezier(0.42, 0.0, 0.58, 1.0) both'}

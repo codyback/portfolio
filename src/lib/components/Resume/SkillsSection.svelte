@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Skill } from '@prisma/client';
+	import SectionHeading from '$lib/components/SectionHeading.svelte';
 
 	export let skills: Skill[];
 </script>
@@ -8,12 +9,10 @@
 	id="cvSkills"
 	class="sm:col-span-1 mt-10 sm:mt-20"
 >
-	<div class="border-b-2 border-black pb-3">
-		<h3 class="uppercase text-2xl font-bold text-right">Skills</h3>
-	</div>
+	<SectionHeading heading="Skills" />
 
-	<div class="border-t-4 border-black mt-0.5 pt-8">
-		<p class="text-justify text-neutral-500">
+	<div class="pt-8">
+		<p class="text-justify dark:text-neutral-300 text-neutral-500">
 			Skills include proficiency in multiple programming languages, frameworks,
 			and tools, with experience in web, mobile and data analysis.
 		</p>

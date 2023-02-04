@@ -1,10 +1,43 @@
-<script>
+<script lang="ts">
 	import Header from '@/lib/components/Navigation/Header.svelte';
 	import Sidebar from '@/lib/components/Navigation/Sidebar.svelte';
 	import Footer from '@/lib/components/Footer.svelte';
+	import { browser } from '$app/environment';
+
 	import '@/app.css';
 
 	let open = false;
+	let darkMode = true;
+
+	type EventMap = {
+		detail: {
+			darkMode: boolean;
+		};
+	};
+
+	function handleSwitchDarkMode(event: EventMap) {
+		darkMode = event.detail.darkMode;
+
+		localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+
+		darkMode
+			? document.documentElement.classList.add('dark')
+			: document.documentElement.classList.remove('dark');
+	}
+
+	if (browser) {
+		if (
+			localStorage.theme === 'dark' ||
+			(!('theme' in localStorage) &&
+				window.matchMedia('(prefers-color-scheme: dark)').matches)
+		) {
+			document.documentElement.classList.add('dark');
+			darkMode = true;
+		} else {
+			document.documentElement.classList.remove('dark');
+			darkMode = false;
+		}
+	}
 </script>
 
 <svelte:head>
@@ -19,12 +52,16 @@
 </svelte:head>
 
 <div
-	class="px-4 sm:px-6 lg:px-8"
+	class="px-4 sm:px-6 lg:px-8 dark:bg-dark-900"
 	class:open
 >
 	<div>
 		<Sidebar bind:open />
-		<Header bind:sidebar={open} />
+		<Header
+			bind:sidebar={open}
+			bind:darkMode
+			on:theme={handleSwitchDarkMode}
+		/>
 		<main class="mx-auto max-w-6xl min-h-screen sm:p-6">
 			<slot />
 		</main>
@@ -43,6 +80,7 @@
 	}
 
 	:global(body) {
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		position: relative;
 		width: 100%;
 		-webkit-box-sizing: border-box;

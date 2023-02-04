@@ -1,16 +1,18 @@
 <script lang="ts">
 	import type { Hobby } from '@prisma/client';
+	import SectionHeading from '$lib/components/SectionHeading.svelte';
 
 	export let hobbies: Hobby[];
 </script>
 
-<section id="cvHobbies">
-	<div class="mt-10 border-b-2 border-black pb-3">
-		<h3 class="uppercase text-2xl font-bold text-right">Hobbies</h3>
-	</div>
+<section
+	id="cvHobbies"
+	class="mt-10 sm:mt-20"
+>
+	<SectionHeading heading="Hobbies" />
 
-	<div class="border-t-4 border-black mt-0.5 pt-8">
-		<p class="text-justify text-neutral-500">
+	<div class="pt-8">
+		<p class="text-justify dark:text-neutral-300 text-neutral-500">
 			I enjoy taking on challenging projects as an opportunity to learn and
 			grow, and am dedicated to delivering high-quality work.
 		</p>
