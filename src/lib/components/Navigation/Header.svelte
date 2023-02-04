@@ -1,8 +1,9 @@
 <script lang="ts">
 	import Hamburger from '@/lib/components/Navigation/Hamburger.svelte';
-	import { page } from '$app/stores';
-	import { createEventDispatcher } from 'svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
+	import NavLink from './NavLink.svelte';
+
+	import { createEventDispatcher } from 'svelte';
 
 	const dispatch = createEventDispatcher();
 
@@ -11,6 +12,29 @@
 			darkMode,
 		});
 	}
+
+	const links = [
+		{
+			href: '/about',
+			title: 'About Page',
+			label: 'About',
+		},
+		{
+			href: '/projects',
+			title: 'Projects Page',
+			label: 'Projects',
+		},
+		{
+			href: '/blog',
+			title: 'Blog Page',
+			label: 'Blog',
+		},
+		{
+			href: '/resources',
+			title: 'Resources Page',
+			label: 'Resources',
+		},
+	];
 
 	export let sidebar = false;
 	export let darkMode = false;
@@ -21,6 +45,8 @@
 		<a
 			href="/"
 			class="font-bold text-xl leading-10 tracking-tight"
+			title="Homepage"
+			aria-label="Homepage"
 		>
 			Cody Backus
 		</a>
@@ -30,34 +56,13 @@
 		<nav
 			class="py-2 px-4 tracking-wider hidden sm:inline text-neutral-800 dark:text-neutral-300"
 		>
-			<a
-				href="/about"
-				class="px-2 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
-				class:underline={$page.route.id?.startsWith('/about')}
-			>
-				About
-			</a>
-			<a
-				href="/projects"
-				class="px-2 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
-				class:underline={$page.route.id?.startsWith('/projects')}
-			>
-				Projects
-			</a>
-			<a
-				href="/blog"
-				class="px-2 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
-				class:underline={$page.route.id?.startsWith('/blog')}
-			>
-				Blog
-			</a>
-			<a
-				href="/resources"
-				class="px-2 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
-				class:underline={$page.route.id?.startsWith('/resources')}
-			>
-				Resources
-			</a>
+			{#each links as link}
+				<NavLink
+					href={link.href}
+					title={link.title}
+					label={link.label}
+				/>
+			{/each}
 		</nav>
 		<div class="flex sm:inline-block justify-center align-middle items-center">
 			<ThemeToggle

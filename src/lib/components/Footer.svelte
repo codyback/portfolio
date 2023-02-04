@@ -8,6 +8,8 @@
 				rel="noreferrer"
 				target="_blank"
 				class="text-gray-400 hover:text-brands-linkedin hover:scale-150 duration-300 transition-all"
+				title="LinkedIn - Cody Backus"
+				aria-label="LinkedIn - Cody Backus"
 			>
 				<span class="sr-only">LinkedIn</span>
 				<svg
@@ -31,6 +33,8 @@
 				rel="noreferrer"
 				target="_blank"
 				class="text-gray-400 hover:text-brands-github dark:hover:text-white hover:scale-150 duration-300 transition-all"
+				title="GitHub - codyback"
+				aria-label="GitHub - codyback"
 			>
 				<span class="sr-only">GitHub</span>
 				<svg
@@ -48,7 +52,9 @@
 			</a>
 		</div>
 		<div class="mt-8 md:order-1 md:mt-0">
-			<p class="text-center text-xs leading-5 text-gray-500">
+			<p
+				class="text-center text-xs leading-5 dark:text-neutral-300 text-gray-500"
+			>
 				&copy; 2023 Cody Backus. All rights reserved.
 			</p>
 		</div>

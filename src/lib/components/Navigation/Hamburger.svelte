@@ -3,7 +3,7 @@
 </script>
 
 <button
-	class="sm:hidden flex items-center justify-items-end m-auto h-10 w-fit hover:text-gray-700 cursor-pointer border-none focus:outline-none"
+	class="sm:hidden flex items-center justify-items-end m-auto h-10 w-fit hover:text-gray-700 dark:hover:text-neutral-300 cursor-pointer border-none focus:outline-none"
 	class:open
 	on:click={() => (open = !open)}
 >

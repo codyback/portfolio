@@ -1,36 +1,54 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 
+	function toggleDrawer() {
+		open = !open;
+	}
+
+	const links = [
+		{
+			href: '/about',
+			title: 'About Page',
+			label: 'About',
+		},
+		{
+			href: '/projects',
+			title: 'Projects Page',
+			label: 'Projects',
+		},
+		{
+			href: '/blog',
+			title: 'Blog Page',
+			label: 'Blog',
+		},
+		{
+			href: '/resources',
+			title: 'Resources Page',
+			label: 'Resources',
+		},
+	];
+
 	export let open = false;
 </script>
 
 {#if open}
 	<aside
 		transition:fly={{ x: 640, opacity: 1 }}
-		class="absolute w-full h-full z-10 bg-gray-200 border-l-2 shadow-lg"
+		class="absolute w-full h-full z-10 bg-gray-200 dark:bg-dark-700 dark:text-neutral-300 dark:border-none border-l-2 shadow-lg"
 		class:open
 	>
-		<nav class="p-12 text-xl">
-			<a
-				href="/about"
-				class="px-2 py-3 block rounded-md hover:bg-slate-200 leading-10"
-				on:click={() => (open = !open)}>ABOUT</a
-			>
-			<a
-				href="/projects"
-				class="px-2 py-3 block rounded-md hover:bg-slate-200 leading-10"
-				on:click={() => (open = !open)}>PROJECTS</a
-			>
-			<a
-				href="/blog"
-				class="px-2 py-3 block rounded-md hover:bg-slate-200 leading-10"
-				on:click={() => (open = !open)}>BLOG</a
-			>
-			<a
-				href="/resources"
-				class="px-2 py-3 block rounded-md hover:bg-slate-200 leading-10"
-				on:click={() => (open = !open)}>RESOURCES</a
-			>
+		<nav class="p-4 mt-14 text-xl">
+			{#each links as link}
+				<a
+					href={link.href}
+					class="px-4 py-2 block rounded-md hover:bg-slate-200 dark:hover:bg-dark-900 leading-10 uppercase"
+					title={link.title}
+					aria-label={link.title}
+					on:click={toggleDrawer}
+				>
+					{link.label}
+				</a>
+			{/each}
 		</nav>
 	</aside>
 {/if}
