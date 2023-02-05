@@ -1,0 +1,148 @@
+// Vitest Snapshot v1
+
+exports[`CertificatesSection > renders correctly with open false 1`] = `
+<body>
+  <div>
+    <section
+      class="mt-10 lg:mt-20"
+      id="cvExperiences"
+    >
+      <div
+        class="border-b-2 border-black dark:border-neutral-500 pb-3"
+      >
+        <h3
+          class="uppercase text-2xl font-bold text-right"
+        >
+          Experience
+        </h3>
+      </div>
+       
+      <div
+        class="border-t-4 border-black dark:border-neutral-500 mt-0.5"
+      />
+      <!--&lt;SectionHeading&gt;-->
+       
+      <div
+        class="pt-8"
+      >
+        <div>
+          <div
+            class="sm:grid sm:grid-cols-2 items-center font-bold"
+          >
+            <div
+              class="sm:col-span-1 text-lg leading-none"
+            >
+              Testing Company 1
+            </div>
+             
+            <div
+              class="sm:col-span-1 sm:text-right sm:pt-0 pt-4"
+            >
+              2000 - Current
+               
+              <br />
+               
+              Testing Position 1
+            </div>
+          </div>
+           
+          <p
+            class="pt-4 text-neutral-500 dark:text-neutral-300"
+          >
+            Testing Company 1 description. Adipisicing amet aliquip occaecat Lorem non do laboris qui consectetur proident ex occaecat.
+          </p>
+           
+          <ul
+            class="pt-4 list-disc text-neutral-500 dark:text-neutral-300"
+          >
+            Responsibilities include:
+						
+            <li
+              class="ml-4"
+            >
+              resp desc 1
+               
+            </li>
+            <li
+              class="ml-4"
+            >
+              resp desc 2
+               
+            </li>
+          </ul>
+           
+          <ul
+            class="pt-4 list-disc text-neutral-500 dark:text-neutral-300"
+          >
+            Projects worked on:
+						
+            <li
+              class="ml-4"
+            >
+              <a
+                class="hover:text-black dark:hover:text-white underline font-bold"
+                href="proj-1-url"
+              >
+                Project 1
+              </a>
+              : 
+              proj-1 desc
+               
+            </li>
+            <li
+              class="ml-4"
+            >
+              <a
+                class="hover:text-black dark:hover:text-white underline font-bold"
+                href="proj-2-url"
+              >
+                Project 2
+              </a>
+              : 
+              proj-2 desc
+               
+            </li>
+          </ul>
+        </div>
+         
+        <hr
+          class="my-8"
+        />
+        
+        <div>
+          <div
+            class="sm:grid sm:grid-cols-2 items-center font-bold"
+          >
+            <div
+              class="sm:col-span-1 text-lg leading-none"
+            >
+              Testing Company 2
+            </div>
+             
+            <div
+              class="sm:col-span-1 sm:text-right sm:pt-0 pt-4"
+            >
+              2000 - 2000
+               
+              <br />
+               
+              Testing Position 2
+            </div>
+          </div>
+           
+          <p
+            class="pt-4 text-neutral-500 dark:text-neutral-300"
+          >
+            Testing Company 2 description. Aliqua aute sint exercitation exercitation excepteur enim excepteur duis eiusmod occaecat voluptate aliquip reprehenderit.
+          </p>
+           
+           
+        </div>
+         
+        
+      </div>
+    </section>
+    <!--&lt;ExperienceSection&gt;-->
+  </div>
+</body>
+`;

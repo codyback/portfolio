@@ -1,0 +1,62 @@
+// Vitest Snapshot v1
+
+exports[`CertificatesSection > renders correctly with open false 1`] = `
+<body>
+  <div>
+    <section
+      class="sm:col-span-1 mt-10 sm:mt-20"
+      id="cvSkills"
+    >
+      <div
+        class="border-b-2 border-black dark:border-neutral-500 pb-3"
+      >
+        <h3
+          class="uppercase text-2xl font-bold text-right"
+        >
+          Skills
+        </h3>
+      </div>
+       
+      <div
+        class="border-t-4 border-black dark:border-neutral-500 mt-0.5"
+      />
+      <!--&lt;SectionHeading&gt;-->
+       
+      <div
+        class="pt-8"
+      >
+        <p
+          class="text-justify dark:text-neutral-300 text-neutral-500"
+        >
+          Skills include proficiency in multiple programming languages, frameworks,
+			and tools, with experience in web, mobile and data analysis.
+        </p>
+         
+        <div
+          class="mt-6 font-bold flex-initial flex-wrap flex-row"
+        >
+          <span
+            class="px-4 py-0.5 mx-1 border border-neutral-300 rounded-full text-xs uppercase"
+          >
+            skill 1
+             
+          </span>
+          <span
+            class="px-4 py-0.5 mx-1 border border-neutral-300 rounded-full text-xs uppercase"
+          >
+            skill 2
+             
+          </span>
+          <span
+            class="px-4 py-0.5 mx-1 border border-neutral-300 rounded-full text-xs uppercase"
+          >
+            skill 3
+             
+          </span>
+        </div>
+      </div>
+    </section>
+    <!--&lt;SkillsSection&gt;-->
+  </div>
+</body>
+`;
