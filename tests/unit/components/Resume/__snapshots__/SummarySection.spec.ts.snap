@@ -1,0 +1,31 @@
+// Vitest Snapshot v1
+
+exports[`Header > renders correctly 1`] = `
+<body>
+  <div>
+    <section
+      class="mt-10 sm:mt-20"
+      id="cvSummary"
+    >
+      <img
+        alt="Cody Backus"
+        class="rounded-sm lg:rounded-full h-48 lg:h-48 sm:h-96 lg:w-48 w-full bg-gray-500"
+        src=""
+      />
+       
+      <div
+        class="mt-4 text-xl font-bold"
+      >
+        Cody Backus
+      </div>
+       
+      <p
+        class="mt-10 text-neutral-500 dark:text-neutral-300 text-justify"
+      >
+        Summary Description - Ex exercitation deserunt veniam ipsum est non aute occaecat.
+      </p>
+    </section>
+    <!--&lt;SummarySection&gt;-->
+  </div>
+</body>
+`;

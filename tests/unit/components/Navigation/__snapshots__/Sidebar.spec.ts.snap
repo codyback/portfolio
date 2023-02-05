@@ -13,37 +13,46 @@ exports[`Sidebar > renders correctly with open true 1`] = `
 <body>
   <div>
     <aside
-      class="absolute w-full h-full z-10 bg-gray-200 border-l-2 shadow-lg s-RQ-jkbaw6IIv open"
+      class="absolute w-full h-full z-10 bg-gray-200 dark:bg-dark-700 dark:text-neutral-300 dark:border-none border-l-2 shadow-lg s-RQ-jkbaw6IIv open"
     >
       <nav
-        class="p-12 text-xl s-RQ-jkbaw6IIv"
+        class="p-4 mt-14 text-xl s-RQ-jkbaw6IIv"
       >
         <a
-          class="px-2 py-3 block rounded-md hover:bg-slate-200 leading-10 s-RQ-jkbaw6IIv"
+          aria-label="About Page"
+          class="px-4 py-2 block rounded-md hover:bg-slate-200 dark:hover:bg-dark-900 leading-10 uppercase s-RQ-jkbaw6IIv"
           href="/about"
+          title="About Page"
         >
-          ABOUT
+          About
+           
         </a>
-         
         <a
-          class="px-2 py-3 block rounded-md hover:bg-slate-200 leading-10 s-RQ-jkbaw6IIv"
+          aria-label="Projects Page"
+          class="px-4 py-2 block rounded-md hover:bg-slate-200 dark:hover:bg-dark-900 leading-10 uppercase s-RQ-jkbaw6IIv"
           href="/projects"
+          title="Projects Page"
         >
-          PROJECTS
+          Projects
+           
         </a>
-         
         <a
-          class="px-2 py-3 block rounded-md hover:bg-slate-200 leading-10 s-RQ-jkbaw6IIv"
+          aria-label="Blog Page"
+          class="px-4 py-2 block rounded-md hover:bg-slate-200 dark:hover:bg-dark-900 leading-10 uppercase s-RQ-jkbaw6IIv"
           href="/blog"
+          title="Blog Page"
         >
-          BLOG
+          Blog
+           
         </a>
-         
         <a
-          class="px-2 py-3 block rounded-md hover:bg-slate-200 leading-10 s-RQ-jkbaw6IIv"
+          aria-label="Resources Page"
+          class="px-4 py-2 block rounded-md hover:bg-slate-200 dark:hover:bg-dark-900 leading-10 uppercase s-RQ-jkbaw6IIv"
           href="/resources"
+          title="Resources Page"
         >
-          RESOURCES
+          Resources
+           
         </a>
       </nav>
     </aside>

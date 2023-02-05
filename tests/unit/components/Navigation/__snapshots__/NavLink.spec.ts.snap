@@ -1,0 +1,33 @@
+// Vitest Snapshot v1
+
+exports[`Header > renders correctly 1`] = `
+<body>
+  <div>
+    <a
+      aria-label="Testing Navlink"
+      class="px-3 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
+      href="/test"
+      title="Testing Navlink"
+    >
+      Testing
+    </a>
+    <!--&lt;NavLink&gt;-->
+  </div>
+</body>
+`;
+
+exports[`Header > renders correctly with about page being active 1`] = `
+<body>
+  <div>
+    <a
+      aria-label="About Page"
+      class="px-3 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10 underline"
+      href="/about"
+      title="About Page"
+    >
+      About
+    </a>
+    <!--&lt;NavLink&gt;-->
+  </div>
+</body>
+`;

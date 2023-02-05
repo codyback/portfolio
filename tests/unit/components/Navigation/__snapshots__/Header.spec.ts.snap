@@ -10,8 +10,10 @@ exports[`Header > renders correctly with open false 1`] = `
         class="py-2"
       >
         <a
+          aria-label="Homepage"
           class="font-bold text-xl leading-10 tracking-tight"
           href="/"
+          title="Homepage"
         >
           Cody Backus
         </a>
@@ -24,32 +26,41 @@ exports[`Header > renders correctly with open false 1`] = `
           class="py-2 px-4 tracking-wider hidden sm:inline text-neutral-800 dark:text-neutral-300"
         >
           <a
-            class="px-2 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10 underline"
+            aria-label="About Page"
+            class="px-3 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10 underline"
             href="/about"
+            title="About Page"
           >
             About
           </a>
-           
+          <!--&lt;NavLink&gt;-->
           <a
-            class="px-2 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
+            aria-label="Projects Page"
+            class="px-3 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
             href="/projects"
+            title="Projects Page"
           >
             Projects
           </a>
-           
+          <!--&lt;NavLink&gt;-->
           <a
-            class="px-2 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
+            aria-label="Blog Page"
+            class="px-3 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
             href="/blog"
+            title="Blog Page"
           >
             Blog
           </a>
-           
+          <!--&lt;NavLink&gt;-->
           <a
-            class="px-2 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
+            aria-label="Resources Page"
+            class="px-3 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
             href="/resources"
+            title="Resources Page"
           >
             Resources
           </a>
+          <!--&lt;NavLink&gt;-->
         </nav>
          
         <div
@@ -95,7 +106,7 @@ exports[`Header > renders correctly with open false 1`] = `
           <!--&lt;ThemeToggle&gt;-->
            
           <button
-            class="sm:hidden flex items-center justify-items-end m-auto h-10 w-fit hover:text-gray-700 cursor-pointer border-none focus:outline-none s-zPZ177rNd-sa"
+            class="sm:hidden flex items-center justify-items-end m-auto h-10 w-fit hover:text-gray-700 dark:hover:text-neutral-300 cursor-pointer border-none focus:outline-none s-zPZ177rNd-sa"
           >
             <svg
               class="s-zPZ177rNd-sa"
@@ -147,8 +158,10 @@ exports[`Header > renders correctly with open true 1`] = `
         class="py-2"
       >
         <a
+          aria-label="Homepage"
           class="font-bold text-xl leading-10 tracking-tight"
           href="/"
+          title="Homepage"
         >
           Cody Backus
         </a>
@@ -161,32 +174,41 @@ exports[`Header > renders correctly with open true 1`] = `
           class="py-2 px-4 tracking-wider hidden sm:inline text-neutral-800 dark:text-neutral-300"
         >
           <a
-            class="px-2 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10 underline"
+            aria-label="About Page"
+            class="px-3 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10 underline"
             href="/about"
+            title="About Page"
           >
             About
           </a>
-           
+          <!--&lt;NavLink&gt;-->
           <a
-            class="px-2 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
+            aria-label="Projects Page"
+            class="px-3 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
             href="/projects"
+            title="Projects Page"
           >
             Projects
           </a>
-           
+          <!--&lt;NavLink&gt;-->
           <a
-            class="px-2 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
+            aria-label="Blog Page"
+            class="px-3 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
             href="/blog"
+            title="Blog Page"
           >
             Blog
           </a>
-           
+          <!--&lt;NavLink&gt;-->
           <a
-            class="px-2 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
+            aria-label="Resources Page"
+            class="px-3 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
             href="/resources"
+            title="Resources Page"
           >
             Resources
           </a>
+          <!--&lt;NavLink&gt;-->
         </nav>
          
         <div
@@ -232,7 +254,7 @@ exports[`Header > renders correctly with open true 1`] = `
           <!--&lt;ThemeToggle&gt;-->
            
           <button
-            class="sm:hidden flex items-center justify-items-end m-auto h-10 w-fit hover:text-gray-700 cursor-pointer border-none focus:outline-none s-zPZ177rNd-sa open"
+            class="sm:hidden flex items-center justify-items-end m-auto h-10 w-fit hover:text-gray-700 dark:hover:text-neutral-300 cursor-pointer border-none focus:outline-none s-zPZ177rNd-sa open"
           >
             <svg
               class="s-zPZ177rNd-sa"
