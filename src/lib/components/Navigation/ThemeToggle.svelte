@@ -4,7 +4,6 @@
 	const dispatch = createEventDispatcher();
 
 	function handleDarkModeToggle() {
-		console.log(darkMode);
 		darkMode = !darkMode;
 		dispatch('theme', {
 			darkMode,

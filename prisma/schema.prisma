@@ -91,25 +91,34 @@ model Certificate {
 }
 
 model About {
-  id String @id @default(cuid())
-  imageUrl String
-  goals Goal[]
+  id         String           @id @default(cuid())
+  imageUrl   String
+  goals      Goal[]
   paragraphs AboutParagraph[]
 }
 
 model Goal {
-  id String @id @default(cuid())
-  name String
-  goalPost String
-  year String
+  id          String    @id @default(cuid())
+  name        String
+  goalPost    String
+  year        String
   completedAt DateTime?
-  about About @relation(fields: [aboutId], references: [id])
-  aboutId String
+  about       About     @relation(fields: [aboutId], references: [id])
+  aboutId     String
 }
 
 model AboutParagraph {
-  id String @id @default(cuid())
+  id          String @id @default(cuid())
   description String
-  about About @relation(fields: [aboutId], references: [id])
-  aboutId String
+  about       About  @relation(fields: [aboutId], references: [id])
+  aboutId     String
+}
+
+model Project {
+  id          String @id @default(cuid())
+  title       String
+  slug        String @unique
+  description String
+  imageURL    String
+  info        Json
 }

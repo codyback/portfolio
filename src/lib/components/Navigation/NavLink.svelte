@@ -8,7 +8,7 @@
 
 <a
 	{href}
-	class="px-2 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
+	class="px-3 py-3 rounded-md hover:bg-neutral-200 dark:hover:bg-dark-700 leading-10"
 	class:underline={$page.route.id?.startsWith(href)}
 	{title}
 	aria-label={title}

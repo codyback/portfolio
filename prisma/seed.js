@@ -1,7 +1,8 @@
 import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
+
 async function main() {
-	const homepage = await prisma.homepage.upsert({
+	await prisma.homepage.upsert({
 		where: { id: 'cld7vo8rx000008la3em88gqs' },
 		update: {},
 		create: {
@@ -234,8 +235,9 @@ async function main() {
 			},
 		},
 	});
+	console.log('🌱 Homepage');
 
-	const about = await prisma.about.upsert({
+	await prisma.about.upsert({
 		where: { id: 'cld8drnhp000008jpe62h5cxk' },
 		update: {},
 		create: {
@@ -288,8 +290,489 @@ async function main() {
 			},
 		},
 	});
-	console.log({ homepage, about });
+	console.log('🌱 About');
+
+	await prisma.project.createMany({
+		data: [
+			{
+				id: 'cldqh530c0000fmtl97aceowr',
+				title: 'Safar TeleCare - UPMCE',
+				slug: 'safar-telecare-upmce',
+				description:
+					'TeleConsults for the future of medicine. We augment bedside clinical teams through direct connection & collaboration with the right remote experts',
+				imageURL:
+					'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+				info: {
+					description: [
+						{
+							id: 0,
+							type: 'hero',
+							image:
+								'https://images.unsplash.com/photo-1513106021000-168e5f56609d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+							content:
+								'Nostrud exercitation quis velit excepteur sint consequat elit dolore.',
+						},
+						{
+							id: 1,
+							type: 'parapgraph',
+							content: [
+								'Duis proident velit ad est pariatur velit nulla est qui quis reprehenderit anim aliqua ullamco ut. Est voluptate adipisicing Lorem. Magna excepteur nostrud sunt fugiat ex laboris ipsum aute sunt occaecat commodo. Nostrud sunt ut consequat nisi proident ut minim aliquip dolore ipsum consectetur. Et officia enim sit aliquip sit enim magna mollit aute id.',
+								'Aliqua minim cupidatat ullamco commodo nostrud. Pariatur dolore proident ullamco dolore sit mollit excepteur pariatur consequat qui veniam. Velit sint laborum esse dolor mollit exercitation sint ipsum magna nisi dolore commodo. Adipisicing consequat dolor ad cupidatat sint aliquip. Consectetur excepteur et commodo adipisicing ipsum.',
+							],
+						},
+						{
+							id: 2,
+							type: 'image',
+							url: 'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+							alt: 'Testing Image',
+						},
+						{
+							id: 3,
+							type: 'code',
+							language: 'JavaScript',
+							content:
+								'const test = "this is a code block highlted with prisma.js";',
+						},
+					],
+					tags: ['JavaScript', 'Express', 'MySQL'],
+				},
+			},
+			{
+				id: 'cldqlzqtj0000fmtlfdasfvba',
+				title: 'Safar TeleCare - UPMCE',
+				slug: 'pariatur',
+				description:
+					'TeleConsults for the future of medicine. We augment bedside clinical teams through direct connection & collaboration with the right remote experts',
+				imageURL:
+					'https://images.unsplash.com/photo-1675430427294-8aee1da3f5b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
+				info: {
+					description: [
+						{
+							id: 0,
+							type: 'hero',
+							image:
+								'https://images.unsplash.com/photo-1513106021000-168e5f56609d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+							content:
+								'Nostrud exercitation quis velit excepteur sint consequat elit dolore.',
+						},
+						{
+							id: 1,
+							type: 'parapgraph',
+							content: [
+								'Duis proident velit ad est pariatur velit nulla est qui quis reprehenderit anim aliqua ullamco ut. Est voluptate adipisicing Lorem. Magna excepteur nostrud sunt fugiat ex laboris ipsum aute sunt occaecat commodo. Nostrud sunt ut consequat nisi proident ut minim aliquip dolore ipsum consectetur. Et officia enim sit aliquip sit enim magna mollit aute id.',
+								'Aliqua minim cupidatat ullamco commodo nostrud. Pariatur dolore proident ullamco dolore sit mollit excepteur pariatur consequat qui veniam. Velit sint laborum esse dolor mollit exercitation sint ipsum magna nisi dolore commodo. Adipisicing consequat dolor ad cupidatat sint aliquip. Consectetur excepteur et commodo adipisicing ipsum.',
+							],
+						},
+						{
+							id: 2,
+							type: 'image',
+							url: 'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+							alt: 'Testing Image',
+						},
+						{
+							id: 3,
+							type: 'code',
+							language: 'JavaScript',
+							content:
+								'const test = "this is a code block highlted with prisma.js";',
+						},
+					],
+					tags: ['JavaScript', 'Express', 'MySQL'],
+				},
+			},
+			{
+				id: 'cldqlxygp0000fmtl8mmt47q0',
+				title: 'Safar TeleCare - UPMCE',
+				slug: 'eiusmod',
+				description:
+					'TeleConsults for the future of medicine. We augment bedside clinical teams through direct connection & collaboration with the right remote experts',
+				imageURL:
+					'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+				info: {
+					description: [
+						{
+							id: 0,
+							type: 'hero',
+							image:
+								'https://images.unsplash.com/photo-1513106021000-168e5f56609d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+							content:
+								'Nostrud exercitation quis velit excepteur sint consequat elit dolore.',
+						},
+						{
+							id: 1,
+							type: 'parapgraph',
+							content: [
+								'Duis proident velit ad est pariatur velit nulla est qui quis reprehenderit anim aliqua ullamco ut. Est voluptate adipisicing Lorem. Magna excepteur nostrud sunt fugiat ex laboris ipsum aute sunt occaecat commodo. Nostrud sunt ut consequat nisi proident ut minim aliquip dolore ipsum consectetur. Et officia enim sit aliquip sit enim magna mollit aute id.',
+								'Aliqua minim cupidatat ullamco commodo nostrud. Pariatur dolore proident ullamco dolore sit mollit excepteur pariatur consequat qui veniam. Velit sint laborum esse dolor mollit exercitation sint ipsum magna nisi dolore commodo. Adipisicing consequat dolor ad cupidatat sint aliquip. Consectetur excepteur et commodo adipisicing ipsum.',
+							],
+						},
+						{
+							id: 2,
+							type: 'image',
+							url: 'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+							alt: 'Testing Image',
+						},
+						{
+							id: 3,
+							type: 'code',
+							language: 'JavaScript',
+							content:
+								'const test = "this is a code block highlted with prisma.js";',
+						},
+					],
+					tags: ['JavaScript', 'Express', 'MySQL'],
+				},
+			},
+			{
+				id: 'cldqly61x0000fmtl2h7u4jpx',
+				title: 'Safar TeleCare - UPMCE',
+				slug: 'adipisicing',
+				description:
+					'TeleConsults for the future of medicine. We augment bedside clinical teams through direct connection & collaboration with the right remote experts',
+				imageURL:
+					'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+				info: {
+					description: [
+						{
+							id: 0,
+							type: 'hero',
+							image:
+								'https://images.unsplash.com/photo-1513106021000-168e5f56609d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+							content:
+								'Nostrud exercitation quis velit excepteur sint consequat elit dolore.',
+						},
+						{
+							id: 1,
+							type: 'parapgraph',
+							content: [
+								'Duis proident velit ad est pariatur velit nulla est qui quis reprehenderit anim aliqua ullamco ut. Est voluptate adipisicing Lorem. Magna excepteur nostrud sunt fugiat ex laboris ipsum aute sunt occaecat commodo. Nostrud sunt ut consequat nisi proident ut minim aliquip dolore ipsum consectetur. Et officia enim sit aliquip sit enim magna mollit aute id.',
+								'Aliqua minim cupidatat ullamco commodo nostrud. Pariatur dolore proident ullamco dolore sit mollit excepteur pariatur consequat qui veniam. Velit sint laborum esse dolor mollit exercitation sint ipsum magna nisi dolore commodo. Adipisicing consequat dolor ad cupidatat sint aliquip. Consectetur excepteur et commodo adipisicing ipsum.',
+							],
+						},
+						{
+							id: 2,
+							type: 'image',
+							url: 'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+							alt: 'Testing Image',
+						},
+						{
+							id: 3,
+							type: 'code',
+							language: 'JavaScript',
+							content:
+								'const test = "this is a code block highlted with prisma.js";',
+						},
+					],
+					tags: ['JavaScript', 'Express', 'MySQL'],
+				},
+			},
+			{
+				id: 'cldqlybj00000fmtl7di1at54',
+				title: 'Safar TeleCare - UPMCE',
+				slug: 'dolore',
+				description:
+					'TeleConsults for the future of medicine. We augment bedside clinical teams through direct connection & collaboration with the right remote experts',
+				imageURL:
+					'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+				info: {
+					description: [
+						{
+							id: 0,
+							type: 'hero',
+							image:
+								'https://images.unsplash.com/photo-1513106021000-168e5f56609d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+							content:
+								'Nostrud exercitation quis velit excepteur sint consequat elit dolore.',
+						},
+						{
+							id: 1,
+							type: 'parapgraph',
+							content: [
+								'Duis proident velit ad est pariatur velit nulla est qui quis reprehenderit anim aliqua ullamco ut. Est voluptate adipisicing Lorem. Magna excepteur nostrud sunt fugiat ex laboris ipsum aute sunt occaecat commodo. Nostrud sunt ut consequat nisi proident ut minim aliquip dolore ipsum consectetur. Et officia enim sit aliquip sit enim magna mollit aute id.',
+								'Aliqua minim cupidatat ullamco commodo nostrud. Pariatur dolore proident ullamco dolore sit mollit excepteur pariatur consequat qui veniam. Velit sint laborum esse dolor mollit exercitation sint ipsum magna nisi dolore commodo. Adipisicing consequat dolor ad cupidatat sint aliquip. Consectetur excepteur et commodo adipisicing ipsum.',
+							],
+						},
+						{
+							id: 2,
+							type: 'image',
+							url: 'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+							alt: 'Testing Image',
+						},
+						{
+							id: 3,
+							type: 'code',
+							language: 'JavaScript',
+							content:
+								'const test = "this is a code block highlted with prisma.js";',
+						},
+					],
+					tags: ['JavaScript', 'Express', 'MySQL'],
+				},
+			},
+			{
+				id: 'cldqlyfyv0000fmtlbxx4791p',
+				title: 'Safar TeleCare - UPMCE',
+				slug: 'aliquip',
+				description:
+					'TeleConsults for the future of medicine. We augment bedside clinical teams through direct connection & collaboration with the right remote experts',
+				imageURL:
+					'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+				info: {
+					description: [
+						{
+							id: 0,
+							type: 'hero',
+							image:
+								'https://images.unsplash.com/photo-1513106021000-168e5f56609d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+							content:
+								'Nostrud exercitation quis velit excepteur sint consequat elit dolore.',
+						},
+						{
+							id: 1,
+							type: 'parapgraph',
+							content: [
+								'Duis proident velit ad est pariatur velit nulla est qui quis reprehenderit anim aliqua ullamco ut. Est voluptate adipisicing Lorem. Magna excepteur nostrud sunt fugiat ex laboris ipsum aute sunt occaecat commodo. Nostrud sunt ut consequat nisi proident ut minim aliquip dolore ipsum consectetur. Et officia enim sit aliquip sit enim magna mollit aute id.',
+								'Aliqua minim cupidatat ullamco commodo nostrud. Pariatur dolore proident ullamco dolore sit mollit excepteur pariatur consequat qui veniam. Velit sint laborum esse dolor mollit exercitation sint ipsum magna nisi dolore commodo. Adipisicing consequat dolor ad cupidatat sint aliquip. Consectetur excepteur et commodo adipisicing ipsum.',
+							],
+						},
+						{
+							id: 2,
+							type: 'image',
+							url: 'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+							alt: 'Testing Image',
+						},
+						{
+							id: 3,
+							type: 'code',
+							language: 'JavaScript',
+							content:
+								'const test = "this is a code block highlted with prisma.js";',
+						},
+					],
+					tags: ['JavaScript', 'Express', 'MySQL'],
+				},
+			},
+			{
+				id: 'cldqlykz40000fmtl3tcv1lwm',
+				title: 'Safar TeleCare - UPMCE',
+				slug: 'reprehenderit',
+				description:
+					'TeleConsults for the future of medicine. We augment bedside clinical teams through direct connection & collaboration with the right remote experts',
+				imageURL:
+					'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+				info: {
+					description: [
+						{
+							id: 0,
+							type: 'hero',
+							image:
+								'https://images.unsplash.com/photo-1513106021000-168e5f56609d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+							content:
+								'Nostrud exercitation quis velit excepteur sint consequat elit dolore.',
+						},
+						{
+							id: 1,
+							type: 'parapgraph',
+							content: [
+								'Duis proident velit ad est pariatur velit nulla est qui quis reprehenderit anim aliqua ullamco ut. Est voluptate adipisicing Lorem. Magna excepteur nostrud sunt fugiat ex laboris ipsum aute sunt occaecat commodo. Nostrud sunt ut consequat nisi proident ut minim aliquip dolore ipsum consectetur. Et officia enim sit aliquip sit enim magna mollit aute id.',
+								'Aliqua minim cupidatat ullamco commodo nostrud. Pariatur dolore proident ullamco dolore sit mollit excepteur pariatur consequat qui veniam. Velit sint laborum esse dolor mollit exercitation sint ipsum magna nisi dolore commodo. Adipisicing consequat dolor ad cupidatat sint aliquip. Consectetur excepteur et commodo adipisicing ipsum.',
+							],
+						},
+						{
+							id: 2,
+							type: 'image',
+							url: 'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+							alt: 'Testing Image',
+						},
+						{
+							id: 3,
+							type: 'code',
+							language: 'JavaScript',
+							content:
+								'const test = "this is a code block highlted with prisma.js";',
+						},
+					],
+					tags: ['JavaScript', 'Express', 'MySQL'],
+				},
+			},
+			{
+				id: 'cldqlypa80000fmtl3x288chj',
+				title: 'Safar TeleCare - UPMCE',
+				slug: 'veniam',
+				description:
+					'TeleConsults for the future of medicine. We augment bedside clinical teams through direct connection & collaboration with the right remote experts',
+				imageURL:
+					'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+				info: {
+					description: [
+						{
+							id: 0,
+							type: 'hero',
+							image:
+								'https://images.unsplash.com/photo-1513106021000-168e5f56609d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+							content:
+								'Nostrud exercitation quis velit excepteur sint consequat elit dolore.',
+						},
+						{
+							id: 1,
+							type: 'parapgraph',
+							content: [
+								'Duis proident velit ad est pariatur velit nulla est qui quis reprehenderit anim aliqua ullamco ut. Est voluptate adipisicing Lorem. Magna excepteur nostrud sunt fugiat ex laboris ipsum aute sunt occaecat commodo. Nostrud sunt ut consequat nisi proident ut minim aliquip dolore ipsum consectetur. Et officia enim sit aliquip sit enim magna mollit aute id.',
+								'Aliqua minim cupidatat ullamco commodo nostrud. Pariatur dolore proident ullamco dolore sit mollit excepteur pariatur consequat qui veniam. Velit sint laborum esse dolor mollit exercitation sint ipsum magna nisi dolore commodo. Adipisicing consequat dolor ad cupidatat sint aliquip. Consectetur excepteur et commodo adipisicing ipsum.',
+							],
+						},
+						{
+							id: 2,
+							type: 'image',
+							url: 'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+							alt: 'Testing Image',
+						},
+						{
+							id: 3,
+							type: 'code',
+							language: 'JavaScript',
+							content:
+								'const test = "this is a code block highlted with prisma.js";',
+						},
+					],
+					tags: ['JavaScript', 'Express', 'MySQL'],
+				},
+			},
+			{
+				id: 'cldqlyt840000fmtleue03pku',
+				title: 'Safar TeleCare - UPMCE',
+				slug: 'nisi',
+				description:
+					'TeleConsults for the future of medicine. We augment bedside clinical teams through direct connection & collaboration with the right remote experts',
+				imageURL:
+					'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+				info: {
+					description: [
+						{
+							id: 0,
+							type: 'hero',
+							image:
+								'https://images.unsplash.com/photo-1513106021000-168e5f56609d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+							content:
+								'Nostrud exercitation quis velit excepteur sint consequat elit dolore.',
+						},
+						{
+							id: 1,
+							type: 'parapgraph',
+							content: [
+								'Duis proident velit ad est pariatur velit nulla est qui quis reprehenderit anim aliqua ullamco ut. Est voluptate adipisicing Lorem. Magna excepteur nostrud sunt fugiat ex laboris ipsum aute sunt occaecat commodo. Nostrud sunt ut consequat nisi proident ut minim aliquip dolore ipsum consectetur. Et officia enim sit aliquip sit enim magna mollit aute id.',
+								'Aliqua minim cupidatat ullamco commodo nostrud. Pariatur dolore proident ullamco dolore sit mollit excepteur pariatur consequat qui veniam. Velit sint laborum esse dolor mollit exercitation sint ipsum magna nisi dolore commodo. Adipisicing consequat dolor ad cupidatat sint aliquip. Consectetur excepteur et commodo adipisicing ipsum.',
+							],
+						},
+						{
+							id: 2,
+							type: 'image',
+							url: 'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+							alt: 'Testing Image',
+						},
+						{
+							id: 3,
+							type: 'code',
+							language: 'JavaScript',
+							content:
+								'const test = "this is a code block highlted with prisma.js";',
+						},
+					],
+					tags: ['JavaScript', 'Express', 'MySQL'],
+				},
+			},
+			{
+				id: 'cldqlywzi0000fmtl22vbbcqv',
+				title: 'Safar TeleCare - UPMCE',
+				slug: 'culpa',
+				description:
+					'TeleConsults for the future of medicine. We augment bedside clinical teams through direct connection & collaboration with the right remote experts',
+				imageURL:
+					'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+				info: {
+					description: [
+						{
+							id: 0,
+							type: 'hero',
+							image:
+								'https://images.unsplash.com/photo-1513106021000-168e5f56609d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+							content:
+								'Nostrud exercitation quis velit excepteur sint consequat elit dolore.',
+						},
+						{
+							id: 1,
+							type: 'parapgraph',
+							content: [
+								'Duis proident velit ad est pariatur velit nulla est qui quis reprehenderit anim aliqua ullamco ut. Est voluptate adipisicing Lorem. Magna excepteur nostrud sunt fugiat ex laboris ipsum aute sunt occaecat commodo. Nostrud sunt ut consequat nisi proident ut minim aliquip dolore ipsum consectetur. Et officia enim sit aliquip sit enim magna mollit aute id.',
+								'Aliqua minim cupidatat ullamco commodo nostrud. Pariatur dolore proident ullamco dolore sit mollit excepteur pariatur consequat qui veniam. Velit sint laborum esse dolor mollit exercitation sint ipsum magna nisi dolore commodo. Adipisicing consequat dolor ad cupidatat sint aliquip. Consectetur excepteur et commodo adipisicing ipsum.',
+							],
+						},
+						{
+							id: 2,
+							type: 'image',
+							url: 'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+							alt: 'Testing Image',
+						},
+						{
+							id: 3,
+							type: 'code',
+							language: 'JavaScript',
+							content:
+								'const test = "this is a code block highlted with prisma.js";',
+						},
+					],
+					tags: ['JavaScript', 'Express', 'MySQL'],
+				},
+			},
+			{
+				id: 'cldqlz1360000fmtldxai3nas',
+				title: 'Safar TeleCare - UPMCE',
+				slug: 'duis',
+				description:
+					'TeleConsults for the future of medicine. We augment bedside clinical teams through direct connection & collaboration with the right remote experts',
+				imageURL:
+					'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+				info: {
+					description: [
+						{
+							id: 0,
+							type: 'hero',
+							image:
+								'https://images.unsplash.com/photo-1513106021000-168e5f56609d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+							content:
+								'Nostrud exercitation quis velit excepteur sint consequat elit dolore.',
+						},
+						{
+							id: 1,
+							type: 'parapgraph',
+							content: [
+								'Duis proident velit ad est pariatur velit nulla est qui quis reprehenderit anim aliqua ullamco ut. Est voluptate adipisicing Lorem. Magna excepteur nostrud sunt fugiat ex laboris ipsum aute sunt occaecat commodo. Nostrud sunt ut consequat nisi proident ut minim aliquip dolore ipsum consectetur. Et officia enim sit aliquip sit enim magna mollit aute id.',
+								'Aliqua minim cupidatat ullamco commodo nostrud. Pariatur dolore proident ullamco dolore sit mollit excepteur pariatur consequat qui veniam. Velit sint laborum esse dolor mollit exercitation sint ipsum magna nisi dolore commodo. Adipisicing consequat dolor ad cupidatat sint aliquip. Consectetur excepteur et commodo adipisicing ipsum.',
+							],
+						},
+						{
+							id: 2,
+							type: 'image',
+							url: 'https://images.unsplash.com/photo-1674318012388-141651b08a51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+							alt: 'Testing Image',
+						},
+						{
+							id: 3,
+							type: 'code',
+							language: 'JavaScript',
+							content:
+								'const test = "this is a code block highlted with prisma.js";',
+						},
+					],
+					tags: ['JavaScript', 'Express', 'MySQL'],
+				},
+			},
+		],
+	});
+
+	console.log('🌱 Projects');
 }
+
 main()
 	.then(async () => {
 		await prisma.$disconnect();
