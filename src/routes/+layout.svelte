@@ -120,4 +120,15 @@
 			opacity: 1;
 		}
 	}
+
+	@keyframes -global-from-bottom {
+		0% {
+			transform: translateY(100vh);
+			opacity: 0;
+		}
+		100% {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
 </style>
