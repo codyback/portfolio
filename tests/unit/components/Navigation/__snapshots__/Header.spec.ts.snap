@@ -11,7 +11,7 @@ exports[`Header > renders correctly with open false 1`] = `
       >
         <a
           aria-label="Homepage"
-          class="font-bold text-xl leading-10 tracking-tight"
+          class="font-bold text-xl leading-10 tracking-tight block hover:scale-110 transition-all duration-300"
           href="/"
           title="Homepage"
         >
@@ -159,7 +159,7 @@ exports[`Header > renders correctly with open true 1`] = `
       >
         <a
           aria-label="Homepage"
-          class="font-bold text-xl leading-10 tracking-tight"
+          class="font-bold text-xl leading-10 tracking-tight block hover:scale-110 transition-all duration-300"
           href="/"
           title="Homepage"
         >

@@ -12,3 +12,4 @@ data
 /coverage
 .vercel
 playwright-report
+.idea

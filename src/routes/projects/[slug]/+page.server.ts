@@ -1,9 +1,9 @@
 import { PrismaClient } from '@prisma/client';
 
 type PageParams = {
-	params: {
-		slug: string;
-	};
+  params: {
+    slug: string;
+  };
 };
 
 const prisma = new PrismaClient();
@@ -11,11 +11,11 @@ const prisma = new PrismaClient();
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ params }: PageParams) {
-	return {
-		projects: prisma.project.findFirstOrThrow({
-			where: {
-				slug: params.slug,
-			},
-		}),
-	};
+  return {
+    projects: prisma.project.findFirstOrThrow({
+      where: {
+        slug: params.slug,
+      },
+    }),
+  };
 }

@@ -3,9 +3,9 @@ import { render } from '@testing-library/svelte';
 import { describe, it, expect } from 'vitest';
 
 describe('Sidebar', () => {
-	it('renders correctly', () => {
-		const { container } = render(Footer);
+  it('renders correctly', () => {
+    const { container } = render(Footer);
 
-		expect(container).toMatchSnapshot();
-	});
+    expect(container).toMatchSnapshot();
+  });
 });

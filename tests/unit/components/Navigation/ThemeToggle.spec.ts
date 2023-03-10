@@ -3,12 +3,12 @@ import { render } from '@testing-library/svelte';
 import { vi } from 'vitest';
 
 describe('Header', () => {
-	beforeAll(() => {
-		vi.resetAllMocks();
-	});
+  beforeAll(() => {
+    vi.resetAllMocks();
+  });
 
-	it('renders correctly', () => {
-		const { container } = render(ThemeToggle, { darkMode: true });
-		expect(container).toMatchSnapshot();
-	});
+  it('renders correctly', () => {
+    const { container } = render(ThemeToggle, { darkMode: true });
+    expect(container).toMatchSnapshot();
+  });
 });

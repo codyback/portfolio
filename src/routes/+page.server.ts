@@ -5,23 +5,23 @@ const prisma = new PrismaClient();
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
-	return {
-		homepage: prisma.homepage.findFirst({
-			include: {
-				experiences: {
-					include: {
-						responsibilities: true,
-						projects: true,
-					},
-				},
-				skills: true,
-				hobbies: true,
-				certifications: {
-					include: {
-						certificates: true,
-					},
-				},
-			},
-		}),
-	};
+  return {
+    homepage: prisma.homepage.findFirst({
+      include: {
+        experiences: {
+          include: {
+            responsibilities: true,
+            projects: true,
+          },
+        },
+        skills: true,
+        hobbies: true,
+        certifications: {
+          include: {
+            certificates: true,
+          },
+        },
+      },
+    }),
+  };
 }

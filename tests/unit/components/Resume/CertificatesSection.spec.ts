@@ -4,27 +4,27 @@ import { render } from '@testing-library/svelte';
 import { describe, it, expect } from 'vitest';
 
 const certifications: (TechnologyCertificate & {
-	certificates: Certificate[];
+  certificates: Certificate[];
 })[] = [
-	{
-		id: 'technology-cert-id',
-		name: 'testing-title',
-		homepageId: 'homepage-id',
-		certificates: [
-			{
-				id: 'cert-id',
-				name: 'testing',
-				completedAt: new Date(),
-				technologyCertificateId: '',
-			},
-		],
-	},
+  {
+    id: 'technology-cert-id',
+    name: 'testing-title',
+    homepageId: 'homepage-id',
+    certificates: [
+      {
+        id: 'cert-id',
+        name: 'testing',
+        completedAt: new Date('01-01-2023'),
+        technologyCertificateId: '',
+      },
+    ],
+  },
 ];
 
 describe('CertificatesSection', () => {
-	it('renders correctly with open false', () => {
-		const { container } = render(CertificatesSection, { certifications });
+  it('renders correctly with open false', () => {
+    const { container } = render(CertificatesSection, { certifications });
 
-		expect(container).toMatchSnapshot();
-	});
+    expect(container).toMatchSnapshot();
+  });
 });

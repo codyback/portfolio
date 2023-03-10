@@ -5,12 +5,12 @@ const prisma = new PrismaClient();
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
-	return {
-		about: prisma.about.findFirst({
-			include: {
-				goals: true,
-				paragraphs: true,
-			},
-		}),
-	};
+  return {
+    about: prisma.about.findFirst({
+      include: {
+        goals: true,
+        paragraphs: true,
+      },
+    }),
+  };
 }

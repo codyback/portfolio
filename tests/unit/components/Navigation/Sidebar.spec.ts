@@ -3,15 +3,15 @@ import { render } from '@testing-library/svelte';
 import { describe, it, expect } from 'vitest';
 
 describe('Sidebar', () => {
-	it('renders correctly with open false', () => {
-		const { container } = render(Sidebar, { open: false });
+  it('renders correctly with open false', () => {
+    const { container } = render(Sidebar, { open: false });
 
-		expect(container).toMatchSnapshot();
-	});
+    expect(container).toMatchSnapshot();
+  });
 
-	it('renders correctly with open true', () => {
-		const { container } = render(Sidebar, { open: true });
+  it('renders correctly with open true', () => {
+    const { container } = render(Sidebar, { open: true });
 
-		expect(container).toMatchSnapshot();
-	});
+    expect(container).toMatchSnapshot();
+  });
 });

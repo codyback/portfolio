@@ -5,14 +5,14 @@ const prisma = new PrismaClient();
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
-	return {
-		projects: prisma.project.findMany({
-			select: {
-				slug: true,
-				title: true,
-				description: true,
-				imageURL: true,
-			},
-		}),
-	};
+  return {
+    projects: prisma.project.findMany({
+      select: {
+        slug: true,
+        title: true,
+        description: true,
+        imageURL: true,
+      },
+    }),
+  };
 }
