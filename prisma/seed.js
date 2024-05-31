@@ -7,10 +7,10 @@ async function main() {
     update: {},
     create: {
       id: 'cld7vo8rx000008la3em88gqs',
-      profession: 'Software Developer',
+      profession: 'Software Engineer',
       tagline: 'Continual Learning.',
       description:
-        'Junior Software Engineer dedicated to efficiently delivering results through my proficiency in various programming languages and technologies. My portfolio showcases a range of different projects that demonstrate my ability to problem solve and create functional and user-friendly software.',
+        'Software Engineer dedicated to efficiently delivering results through my proficiency in various programming languages and technologies. My portfolio showcases a range of different projects that demonstrate my ability to problem solve and create functional and user-friendly software.',
       favoriteTech: 'ChatGPT',
       favoriteTechURL: 'https://chat.openai.com/chat',
       currentlyLearning: 'SvelteKit',
@@ -23,7 +23,7 @@ async function main() {
             id: 'cld7vx4xs000108l5ct498n8z',
             company: 'UPMC Enterprises',
             url: 'https://enterprises.upmc.com/',
-            position: 'Associate Software Engineer',
+            position: 'Software Engineer',
             startDate: new Date('05-02-2022'),
             isEmployed: true,
             responsibilities: {
@@ -226,7 +226,7 @@ async function main() {
                 {
                   id: 'cld7wfba1000708meamvi0h3r',
                   name: 'AWS Certified Cloud Practitioner',
-                  completedAt: new Date('02-01-2023'),
+                  completedAt: new Date('12-01-2023'),
                 },
               ],
             },
@@ -248,19 +248,19 @@ async function main() {
             id: 'cld8dt9ad000108jp12373d3t',
             name: 'Fitness',
             goalPost: '182 Days',
-            year: '2023',
+            year: '2024',
           },
           {
             id: 'cld8dtcv7000208jpfs9z3mg6',
             name: 'Reading',
             goalPost: '26 Books',
-            year: '2023',
+            year: '2024',
           },
           {
             id: 'cld8dtfq3000308jp56aecjtw',
             name: 'AWS Certifications',
-            goalPost: '6 Certs',
-            year: '2023',
+            goalPost: '2 Certs',
+            year: '2024',
           },
         ],
       },
@@ -268,7 +268,7 @@ async function main() {
         create: [
           {
             id: 'cld8dxl5r000408jp5s9zdt3t',
-            description: `I'm a junior software developer with a passion for problem-solving and technology. I find the challenge of solving problems and the never-ending learning opportunities that come with working in technology to be incredibly satisfying. I have experience in few programming languages like JavaScript, Java, and C#, and I am constantly trying to expand my skill set by learning new technologies and programming languages.`,
+            description: `I'm a software developer with a passion for problem-solving and technology. I find the challenge of solving problems and the never-ending learning opportunities that come with working in technology to be incredibly satisfying. I have experience in few programming languages like JavaScript, Java, and C#, and I am constantly trying to expand my skill set by learning new technologies and programming languages.`,
           },
           {
             id: 'cld8dxof0000508jpaufj121g',
@@ -276,7 +276,7 @@ async function main() {
           },
           {
             id: 'cld8dxrfm000608jp1g0j4w9q',
-            description: `When it comes to video games, I'm a big fan of retro games like A Link to the Past and Super Mario World. I find the nostalgia and simplicity of these games to be incredibly enjoyable, and I think it's great to be able to play games that have stood the test of time. I also like to play some modern games, but I always come back to my favorites from the past.`,
+            description: `When it comes to video games, I'm a big fan of retro games, currently enjoying A Link to the Past and Super Mario World. I find the nostalgia and simplicity of these games to be incredibly enjoyable, and I think it's great to be able to play games that have stood the test of time. I also like to play some modern games, but I always come back to my favorites from the past.`,
           },
           {
             id: 'cld8dxuks000708jp21j3evga',
@@ -284,7 +284,7 @@ async function main() {
           },
           {
             id: 'cld8dxyb1000808jp2vcte1cx',
-            description: `I'm also planning to get AWS certifications to expand my knowledge and skills in the field, as well as finishing my portfolio website. I believe that having a portfolio website will help me showcase my work and improve my chances of landing my dream job. I'm excited for what the year has in store and look forward to continuing to grow as a developer.`,
+            description: `I'm also planning to get AWS certifications to expand my knowledge and skills in the field, as well as finishing my portfolio website. I'm excited for what the year has in store and look forward to continuing to grow as a developer.`,
           },
         ],
       },

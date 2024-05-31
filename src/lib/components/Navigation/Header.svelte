@@ -19,21 +19,21 @@
       title: 'About Page',
       label: 'About',
     },
-    {
-      href: '/projects',
-      title: 'Projects Page',
-      label: 'Projects',
-    },
-    {
-      href: '/blog',
-      title: 'Blog Page',
-      label: 'Blog',
-    },
-    {
-      href: '/resources',
-      title: 'Resources Page',
-      label: 'Resources',
-    },
+    // {
+    //   href: '/projects',
+    //   title: 'Projects Page',
+    //   label: 'Projects',
+    // },
+    // {
+    //   href: '/blog',
+    //   title: 'Blog Page',
+    //   label: 'Blog',
+    // },
+    // {
+    //   href: '/resources',
+    //   title: 'Resources Page',
+    //   label: 'Resources',
+    // },
   ];
 
   export let sidebar = false;
