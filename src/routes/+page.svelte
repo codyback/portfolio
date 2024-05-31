@@ -28,7 +28,7 @@
   </Saos>
 
   <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-20">
-    <div class="lg:col-span-1 sm:col-span-2 ">
+    <div class="lg:col-span-1 sm:col-span-2">
       <div class="lg:sticky lg:top-10">
         <Saos
           once

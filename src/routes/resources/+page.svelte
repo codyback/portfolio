@@ -29,7 +29,7 @@
               href="https://a.co/d/eIF5J5N"
               target="_blank"
               rel="noreferrer"
-              class="font-bold text-xl dark:text-white text-black dark:hover:text-neutral-300 hover:underline "
+              class="font-bold text-xl dark:text-white text-black dark:hover:text-neutral-300 hover:underline"
             >
               Logitech MX Master 3 Mouse
             </a>
