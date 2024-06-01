@@ -32,6 +32,8 @@ To get started with development, please follow these steps:
 
 To run unit tests, use the command `pnpm test:unit`. This will run all the tests specified in the tests/unit folder using Vitest.
 
+Setting up e2e tests, run the command `pnpm exec playwright install`
+
 To run e2e tests, use the command `pnpm test:e2e`. This will run all the tests specified in the tests/e2e folder using playwright.
 
 ## Build
